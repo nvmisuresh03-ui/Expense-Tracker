@@ -1,0 +1,108 @@
+.container {
+  min-height: 100vh;
+  font-family: sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  width: 337px;
+  padding: 30px;
+}
+
+.logo-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.terms-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.terms-text{
+  font-size: 13px;
+}
+.icon {
+  margin-top: 15px;
+}
+
+.header-txt {
+  font-weight: 600;
+  color: black;
+}
+
+.new-color {
+  font-weight: 600;
+  color: #0f6e56;
+}
+
+.header-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.header-section h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.header-section p {
+  margin-top: 10px;
+  color: #666;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+  background-color: #6f292900;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #6f292900;
+  color: black;
+  border: solid 1px black;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.form label {
+  margin-bottom: 6px;
+  text-align: left;
+  font-size: 17px;
+
+}
+
+.form input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0f6e56;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
