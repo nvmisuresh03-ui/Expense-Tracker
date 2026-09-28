@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+back-end/expense-tracker/bin/
+back-end/expense-tracker/obj/
+back-end/expense-tracker/appsettings.*
