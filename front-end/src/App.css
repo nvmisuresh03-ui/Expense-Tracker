@@ -1,10 +1,43 @@
 .container {
+  --bg: #ffffff;
+  --text: #111111;
+  --label: #333333;
+  --muted: #666666;
+  --field: #ffffff;
+  --border: #c4c9c7;
+  --tab-bg: #eceeed;
+  --accent: #0f6e56;
+  --accent-hover: #0b5844;
+  --accent-text: #0f6e56;
+  --ring: rgba(15, 110, 86, 0.35);
+
+  color-scheme: light;
+  background-color: var(--bg);
+  color: var(--text);
   min-height: 100vh;
   font-family: sans-serif;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    --bg: #16181d;
+    --text: #f2f4f3;
+    --label: #b4bcc4;
+    --muted: #9aa3a0;
+    --field: #24282e;
+    --border: #454b53;
+    --tab-bg: #24282e;
+    --accent: #0f6e56;
+    --accent-hover: #148565;
+    --accent-text: #4fd1a5;
+    --ring: rgba(79, 209, 165, 0.4);
+
+    color-scheme: dark;
+  }
 }
 
 .form-box {
@@ -19,27 +52,34 @@
   gap: 10px;
 }
 
-.terms-section{
+.terms-section {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-.terms-text{
-  font-size: 13px;
+
+.terms-section input {
+  accent-color: var(--accent);
 }
+
+.terms-text {
+  font-size: 13px;
+  color: var(--label);
+}
+
 .icon {
   margin-top: 15px;
 }
 
 .header-txt {
   font-weight: 600;
-  color: black;
+  color: var(--text);
 }
 
 .new-color {
   font-weight: 600;
-  color: #0f6e56;
+  color: var(--accent-text);
 }
 
 .header-section {
@@ -50,31 +90,39 @@
 .header-section h1 {
   font-size: 32px;
   margin: 0;
+  color: var(--text);
 }
 
 .header-section p {
   margin-top: 10px;
-  color: #666;
+  color: var(--muted);
 }
 
 .tabs {
   display: flex;
   gap: 10px;
   margin-top: 25px;
-  background-color: #6f292900;
+  background-color: transparent;
 }
 
 .tab {
   flex: 1;
   padding: 10px;
-  border: none;
+  border: 1px solid transparent;
+  background-color: var(--tab-bg);
+  color: var(--muted);
   cursor: pointer;
 }
 
 .tab.active {
-  background-color: #6f292900;
-  color: black;
-  border: solid 1px black;
+  background-color: transparent;
+  color: var(--text);
+  border: solid 1px var(--text);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 2px;
 }
 
 .form {
@@ -87,22 +135,43 @@
   margin-bottom: 6px;
   text-align: left;
   font-size: 17px;
-
+  color: var(--label);
 }
 
 .form input {
   padding: 12px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   border-radius: 5px;
+  background-color: var(--field);
+  color: var(--text);
+}
+
+.form input:focus {
+  outline: none;
+  border-color: var(--accent-text);
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+.form input[type="checkbox"] {
+  margin-bottom: 0;
 }
 
 .button {
   padding: 12px;
   border: none;
   border-radius: 5px;
-  background-color: #0f6e56;
-  color: white;
+  background-color: var(--accent);
+  color: #ffffff;
   cursor: pointer;
   margin-top: 10px;
+}
+
+.button:hover {
+  background-color: var(--accent-hover);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ring);
 }
